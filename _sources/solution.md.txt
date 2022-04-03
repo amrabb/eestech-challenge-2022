@@ -18,7 +18,7 @@ For the sake of better clarity, we upgraded our graph again by marking even more
 The **red line** denotes the middle point between the (absolute) maximum and minimum measured values   
 The **green dots** mark the average pressure value of intervals, delimited by the orange dots. The averages were then checked against the middle point, changing the value of every point inside the respective interval to 0, if above, or 1, if below the line.  
 <br> 
-After writing the code, we converted it into a json file, containing information about when the leakages occurred, and uploaded it as required. <br>
+After writing the code, we converted it into a json file, containing information about when the leakages occurred, and uploaded it as required.  
 ## **Phase 2**
 The second phase had a more advance dataset than the first one. 
 <br>
