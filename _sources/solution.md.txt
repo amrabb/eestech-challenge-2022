@@ -16,11 +16,9 @@ For the sake of better clarity, we upgraded our graph again by marking even more
 **Blue points** represent the pressure values, measured in a specific point of time (in seconds elapsed from the first measurement)   
 **Orange dots** represent the values we presumed to mark the transition between leaking and not leaking. We calculated them by dividing the data (the measured pressure values) into smaller intervals, finding every maximum/minimum number bigger (or smaller) than the previously known extreme, and then for each intervals taking note of the point deviating the most from the previous extreme compared to all other such points in the interval.   
 The **red line** denotes the middle point between the (absolute) maximum and minimum measured values   
-The **green dots** mark the average pressure value of intervals, delimited by the orange dots. The averages were then checked against the middle point, changing the value of every point inside the respective interval to 1, if above, or 0, if below the line.  
+The **green dots** mark the average pressure value of intervals, delimited by the orange dots. The averages were then checked against the middle point, changing the value of every point inside the respective interval to 0, if above, or 1, if below the line.  
 <br> 
 After writing the code, we converted it into a json file, containing information about when the leakages occurred, and uploaded it as required. <br>
-
-
 ## **Phase 2**
 The second phase had a more advance dataset than the first one. 
 <br>

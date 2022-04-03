@@ -1,3 +1,3 @@
 GitHub Pages of [amrabb/eestech-challenge-2022](https://github.com/amrabb/eestech-challenge-2022.git)
 ===
-Sphinx html documentation of [41a3a7e9](https://github.com/amrabb/eestech-challenge-2022/tree/41a3a7e91160937232529fea12a39cce871e8b14)
+Sphinx html documentation of [3fe06512](https://github.com/amrabb/eestech-challenge-2022/tree/3fe06512b0d99c35616aec9b3d7aa452fdbcd39d)
