@@ -13,6 +13,10 @@ After converting the data, we wrote a python program which converted data sets i
  We have come to the conclusion that the most reliable change is the data for the pressure and we upgraded it by finding those points where data are the most odd and connecting them. 
 For the sake of better clarity, we upgraded our graph again by marking even more relevant points. <br>
 ![popravljen_graf_s_tockami](imgs/popravljen_graf_s_tockami.png)
+**Blue points** represent the pressure values, measured in a specific point of time (in seconds elapsed from the first measurement)
+**Orange dots** represent the values we presumed to mark the transition between leaking and not leaking. We calculated them by dividing the data (the measured pressure values) into smaller intervals, finding every maximum/minimum number bigger (or smaller) than the previously known extreme, and then for each intervals taking note of the point deviating the most from the previous extreme compared to all other such points in the interval.
+The **red line** denotes the middle point between the (absolute) maximum and minimum measured values
+The **green dots** mark the average pressure value of intervals, delimited by the orange dots. The averages were then checked against the middle point, changing the value of every point inside the respective interval to 1, if above, or 0, if below the line.  
 <br> 
 After writing the code, we converted it into a json file, containing information about when the leakages occurred, and uploaded it as required. <br>
 
@@ -21,5 +25,6 @@ After writing the code, we converted it into a json file, containing information
 The second phase had a more advance dataset than the first one. 
 <br>
 Similar to what we did in the first phase, we opted to implement the prediction algorithm by trying to understand the data and the relations between different parameters beforehand.
-We came up with a simple, but seemingly a somewhat effective solution. Making use of the provided training data, we calculated the average pressure values of measurements during leakage and during normal operation respectively. For each measured value we then checked which of the previously mentioned average values it is the closest to. If it was closer to the average<br>
-Beside the resulting json file, we also submitted the working algorithm, which is able to predict real time stream data.git
+We came up with a simple, but seemingly a somewhat effective solution. Making use of the provided training data, we calculated the average pressure values of measurements during leakage and during normal operation respectively. For each measured value we then checked which of the previously mentioned average values it is the closest to. If it was closer to the higher of the values, we changed it to 1, otherwised we replaced it with 0. That provided us with a quick way to detect leakages.<br>
+Beside the resulting json file, we also submitted the working algorithm, which is able to predict real time stream data.
+![One of the phase 2 graphs](imgs/Figure_1.png)
