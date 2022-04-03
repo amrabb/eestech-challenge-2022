@@ -156,7 +156,7 @@
 <li class="toctree-l1"><a class="reference internal" href="challenge_description.html">Challenge description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment.html">Getting started</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Solution</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#"><em><strong>Solution</strong></em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
 </ul>
 
@@ -191,16 +191,29 @@
         </div>
         <article role="main">
           <section id="solution">
-<h1>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h1>
+<h1><em><strong>Solution</strong></em><a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h1>
+<p>We were given the task to detect potential water leakage before it occurs, with the help of pre-prepared data. Faster and more efficient detection of potential water discharges can drastically help reduce drinking water losses in the environment. We were faced with the challenge of developing an algorithm that will try to automatically detect water spills. The task was divided into two phases which we will explain below.</p>
 <section id="phase-1">
-<h2>Phase 1<a class="headerlink" href="#phase-1" title="Permalink to this headline">#</a></h2>
-<p>You should describe your solution for Phase 1 here.</p>
+<h2><strong>Phase 1</strong><a class="headerlink" href="#phase-1" title="Permalink to this headline">#</a></h2>
+<p>In the first phase, the focus was on <strong>analyzing the given data</strong> and trying to <strong>detect water discharges</strong> based on unlabeled data from micro-turbine signals. <br/>
+The only supported programming language was Python, so first we had to import data from a .csv file into a data structure which we then used for our analysis.
+<br/>
+After converting the data, we wrote a python program which converted data sets into graph form. We plotted 5 graphs on the basis of given data for load current, pressure, turbine current, turbine speed and turbine voltage. <br/>
+<img alt="graphs" src="_images/graphs.png"/>
+<br/>
+We have come to the conclusion that the most reliable change is the data for the pressure and we upgraded it by finding those points where data are the most odd and connecting them.
+For the sake of better clarity, we upgraded our graph again by marking even more relevant points. <br/>
+<img alt="popravljen_graf_s_tockami" src="_images/popravljen_graf_s_tockami.png"/>
+<br/>
+After writing the code, we converted it into a json file, containing information about when the leakages occurred, and uploaded it as required. <br/></p>
 </section>
 <section id="phase-2">
-<h2>Phase 2<a class="headerlink" href="#phase-2" title="Permalink to this headline">#</a></h2>
-<p>You should describe your solution for Phase 2 here.</p>
-<p>Example how to add images:
-<img alt="simple graph" src="_images/simple_graph.PNG"/></p>
+<h2><strong>Phase 2</strong><a class="headerlink" href="#phase-2" title="Permalink to this headline">#</a></h2>
+<p>The second phase had a more advance dataset than the first one.
+<br/>
+Similar to what we did in the first phase, we opted to implement the prediction algorithm by trying to understand the data and the relations between different parameters beforehand.
+We came up with a simple, but seemingly a somewhat effective solution. Making use of the provided training data, we calculated the average pressure values of measurements during leakage and during normal operation respectively. For each measured value <br/>
+Beside the resulting json file, we also submitted the working algorithm, which is able to predict real time stream data.git</p>
 </section>
 </section>
 
@@ -261,9 +274,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Solution</a><ul>
-<li><a class="reference internal" href="#phase-1">Phase 1</a></li>
-<li><a class="reference internal" href="#phase-2">Phase 2</a></li>
+<li><a class="reference internal" href="#"><em><strong>Solution</strong></em></a><ul>
+<li><a class="reference internal" href="#phase-1"><strong>Phase 1</strong></a></li>
+<li><a class="reference internal" href="#phase-2"><strong>Phase 2</strong></a></li>
 </ul>
 </li>
 </ul>
