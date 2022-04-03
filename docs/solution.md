@@ -21,5 +21,5 @@ After writing the code, we converted it into a json file, containing information
 The second phase had a more advance dataset than the first one. 
 <br>
 Similar to what we did in the first phase, we opted to implement the prediction algorithm by trying to understand the data and the relations between different parameters beforehand.
-We came up with a simple, but seemingly a somewhat effective solution. Making use of the provided training data, we calculated the average pressure values of measurements during leakage and during normal operation respectively. For each measured value <br>
+We came up with a simple, but seemingly a somewhat effective solution. Making use of the provided training data, we calculated the average pressure values of measurements during leakage and during normal operation respectively. For each measured value we then checked which of the previously mentioned average values it is the closest to. If it was closer to the average<br>
 Beside the resulting json file, we also submitted the working algorithm, which is able to predict real time stream data.git
