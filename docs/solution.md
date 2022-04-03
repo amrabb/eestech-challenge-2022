@@ -12,7 +12,7 @@ After converting the data, we wrote a python program which converted data sets i
 <br>
  We have come to the conclusion that the most reliable change is the data for the pressure and we upgraded it by finding those points where data are the most odd and connecting them. 
 For the sake of better clarity, we upgraded our graph again by marking even more relevant points. <br>
-![popravljen_graf_s_tockami](imgs/popravljen_graf_s_tockami.png)
+![popravljen_graf_s_tockami](imgs/popravljen_graf_s_tockami.png)   
 **Blue points** represent the pressure values, measured in a specific point of time (in seconds elapsed from the first measurement)   
 **Orange dots** represent the values we presumed to mark the transition between leaking and not leaking. We calculated them by dividing the data (the measured pressure values) into smaller intervals, finding every maximum/minimum number bigger (or smaller) than the previously known extreme, and then for each intervals taking note of the point deviating the most from the previous extreme compared to all other such points in the interval.   
 The **red line** denotes the middle point between the (absolute) maximum and minimum measured values   
